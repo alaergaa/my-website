@@ -353,33 +353,46 @@ html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-fa
 .lp-time { font-size: 10px; color: #64748b; font-weight: 600; }
 @media (max-width: 600px) { .live-popup { bottom: 20px; left: 16px; right: 16px; width: auto; } }
 
-/* Floating WhatsApp - تم فرض الكود ليصبح دائرة خضراء مثالية بدون أي خلفيات بيضاء */
+/* Floating WhatsApp - Premium VIP Style */
 .floating-wa { 
   position: fixed !important; 
   bottom: 100px !important; 
   right: 20px !important; 
-  width: 56px !important; 
-  height: 56px !important; 
-  background-color: #25D366 !important; 
+  width: 60px !important; 
+  height: 60px !important; 
+  background: linear-gradient(135deg, #10b981, #047857) !important; /* تدرج زمردي فخم */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* حافة زجاجية خفيفة */
   border-radius: 50% !important; 
   display: flex !important; 
   align-items: center !important; 
   justify-content: center !important; 
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4) !important; 
+  box-shadow: 0 10px 25px rgba(4, 120, 87, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3) !important; /* ظل خارجي ولمعة داخلية */
   z-index: 9999 !important; 
-  transition: transform 0.3s ease !important; 
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; 
   text-decoration: none !important; 
-  border: none !important; 
   outline: none !important;
   -webkit-tap-highlight-color: transparent !important;
-  overflow: hidden !important;
+  animation: waPulse 2.5s infinite !important; /* نبض هادئ */
 }
-.floating-wa:hover { transform: scale(1.1) !important; }
+
+.floating-wa:hover { 
+  transform: scale(1.1) translateY(-3px) !important; /* يرتفع للأعلى قليلاً عند اللمس */
+  box-shadow: 0 15px 35px rgba(4, 120, 87, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.4) !important; 
+  animation: none !important;
+}
+
 .floating-wa svg { 
-  width: 34px !important; 
-  height: 34px !important; 
+  width: 36px !important; 
+  height: 36px !important; 
   fill: #ffffff !important; 
-  background: transparent !important;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3)) !important; /* ظل خفيف للأيقونة نفسها */
+}
+
+/* حركة النبض الفخمة */
+@keyframes waPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5), 0 10px 25px rgba(4, 120, 87, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3); }
+  70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0), 0 10px 25px rgba(4, 120, 87, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0), 0 10px 25px rgba(4, 120, 87, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3); }
 }
 
 /* Replies System */
