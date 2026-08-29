@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رايز | Rise - الأداء بثقة</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط اللغات -->
+  <div class="lang-switcher">
+    <button onclick="changeLanguage('ar')">العربية</button>
+    <button onclick="changeLanguage('he')">עברית</button>
+    <button onclick="changeLanguage('en')">English</button>
+  </div>
+
+  <!-- القسم الرئيسي (Hero) -->
+  <header class="hero">
+    <div class="container">
+      <h1 data-i18n="heroTitle">استعد سيطرتك.. بثقة وأمان تام</h1>
+      <p data-i18n="heroSub">منتج "رايز" الموضعي، البديل الآمن للحبوب. نتيجة فورية خلال 15 دقيقة بدون تخدير وبدون صداع.</p>
+      <a href="#order" class="btn btn-primary glow" data-i18n="ctaButton">اطلب الآن - الدفع عند الاستلام</a>
+    </div>
+  </header>
+
+  <!-- قسم المميزات الطبية -->
+  <section class="features container">
+    <div class="feature-card">
+      <h3 data-i18n="feat1Title">آمن لمرضى القلب والضغط 🫀</h3>
+      <p data-i18n="feat1Desc">استعمال خارجي لا يدخل مجرى الدم، لا يسبب خفقان أو ارتفاع بالضغط.</p>
+    </div>
+    <div class="feature-card">
+      <h3 data-i18n="feat2Title">إحساس طبيعي 100% ⚡</h3>
+      <p data-i18n="feat2Desc">لا يسبب تخدير أو فقدان للمتعة، تركيبة متطورة تمنحك تأخيراً مع الحفاظ على الإحساس.</p>
+    </div>
+    <div class="feature-card">
+      <h3 data-i18n="feat3Title">سرية تامة 📦</h3>
+      <p data-i18n="feat3Desc">يصلك في تغليف أسود مبهم تماماً، المندوب نفسه لا يعرف محتوى الطرد.</p>
+    </div>
+  </section>
+
+  <!-- قسم نقاشات وتجارب العملاء (الجديد) -->
+  <section class="section" id="community-qa">
+    <div class="container">
+      <h2 class="section-title" data-i18n="communityTitle">نقاشات وتجارب العملاء 💬</h2>
+      <div class="community-container">
+        
+        <!-- السيناريو 1: السكري -->
+        <div class="comm-thread">
+          <div class="comm-question">
+            <div class="comm-avatar">أ</div>
+            <div class="comm-content">
+              <div class="comm-header"><span class="comm-name">أبو وليد</span> <span class="comm-time">منذ 3 أيام</span></div>
+              <div class="comm-text">يا اخوان انا مريض سكر من 5 سنين وعندي ضعف هل هذا المنتج يعالج الشي ولا كلام اعلانات ياريت تفيدوني</div>
+            </div>
+          </div>
+          <div class="comm-replies">
+            <div class="comm-reply">
+              <div class="comm-avatar reply-avatar">خ</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">خالد م.</span> <span class="verified-badge">مشتري مؤكد ✅</span></div>
+                <div class="comm-text">انا سكري تراكمي عالي وتعبني الارتخاء جربته والحمدلله النتيجة ممتازة وما أثر على السكر</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">س</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">سامر</span></div>
+                <div class="comm-text">المنتج شغال ونتيجته حلوة بس العبوة صغيرة تخلص بسرعة المفروض يكبرونها شوي</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">م</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">مصطفى</span></div>
+                <div class="comm-text">والله قريت تعليقاتكم وتوكلت على الله توني طالب العرض المزدوج بانتظار يوصلني</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">أ</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">أبو وليد</span></div>
+                <div class="comm-text">تسلمون على صراحتكم ريحتوني والله انا بعد طلبت الحين وبجرب</div>
+              </div>
+            </div>
+          </div>
+          <div class="community-ask-box">
+            <input type="text" placeholder="الاسم" class="qa-name">
+            <textarea placeholder="اكتب ردك أو استفسارك هنا..." class="qa-input"></textarea>
+            <button class="qa-submit-btn" type="button">إرسال الرد</button>
+          </div>
+        </div>
+
+        <!-- السيناريو 2: القلب والشحن -->
+        <div class="comm-thread">
+          <div class="comm-question">
+            <div class="comm-avatar">ع</div>
+            <div class="comm-content">
+              <div class="comm-header"><span class="comm-name">عصام</span> <span class="comm-time">منذ يومين</span></div>
+              <div class="comm-text">يعطيكم العافية شباب، انا عامل قسطرة وباخذ دوا ضغط، بيأثر عالقلب ولا عادي؟</div>
+            </div>
+          </div>
+          <div class="comm-replies">
+            <div class="comm-reply">
+              <div class="comm-avatar reply-avatar">ط</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">طارق</span> <span class="verified-badge">مشتري مؤكد ✅</span></div>
+                <div class="comm-text">اخوي انا مريض ضغط واستخدم رايز وما حسيت بأي صداع ولا دقات قلبي زادت امن</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">م</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">محمد غ.</span></div>
+                <div class="comm-text">شوف هو منيح وفعال وما بيرفع الضغط بس شركة التوصيل غلبتني شوي عبين ما وصلوه عرام الله قعدوا 3 ايام</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">ن</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">نضال</span> <span class="verified-badge">مشتري مؤكد ✅</span></div>
+                <div class="comm-text">اه ضروري تغسله بعد ثلث ساعة هيك احسن الك وللمدام عشان ما تتضايق</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar">ع</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">عصام</span></div>
+                <div class="comm-text">ممتاز دام ما فيه خفقان والتأخير مش مشكلة مقدور عليها بطلبه هلقيت يعطيك العافية</div>
+              </div>
+            </div>
+          </div>
+          <div class="community-ask-box">
+            <input type="text" placeholder="الاسم" class="qa-name">
+            <textarea placeholder="اكتب ردك أو استفسارك هنا..." class="qa-input"></textarea>
+            <button class="qa-submit-btn" type="button">إرسال الرد</button>
+          </div>
+        </div>
+
+        <!-- السيناريو 3: التخدير والقدس -->
+        <div class="comm-thread">
+          <div class="comm-question">
+            <div class="comm-avatar">ي</div>
+            <div class="comm-content">
+              <div class="comm-header"><span class="comm-name">يوسف جابر</span> <span class="comm-time">منذ 5 ساعات</span></div>
+              <div class="comm-text">المنتج انقذني صراحة جربت اشياء كثير بس هذا اللي اعطاني تأخير بدون تعب انصح فيه</div>
+            </div>
+          </div>
+          <div class="comm-replies">
+            <div class="comm-reply">
+              <div class="comm-avatar">ا</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">احمد</span></div>
+                <div class="comm-text">هل يخدر المنطقة وتفقد الاحساس لان البخاخات تخدر كل شي</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar reply-avatar">ر</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">رامي</span> <span class="verified-badge">مشتري مؤكد ✅</span></div>
+                <div class="comm-text">لا يا زلمة ما بخدر بالمرة، مش زي البخاخات اللي بتنشرى من الصيدلية، هاد طبيعي بتحس بكل اشي بس بيعطيك سيطرة</div>
+              </div>
+            </div>
+            <div class="comm-reply">
+              <div class="comm-avatar reply-avatar">ز</div>
+              <div class="comm-content">
+                <div class="comm-header"><span class="comm-name">زياد</span> <span class="verified-badge">مشتري مؤكد ✅</span></div>
+                <div class="comm-text">انا كنت خايف من موضوع التوصيل لاني ساكن مع اهلي بالقدس، بس جابوه بكيس اسود مسكر والشب تبع الدليفري ما بيعرف شو جوا ريحوني والله</div>
+              </div>
+            </div>
+          </div>
+          <div class="community-ask-box">
+            <input type="text" placeholder="الاسم" class="qa-name">
+            <textarea placeholder="اكتب ردك أو استفسارك هنا..." class="qa-input"></textarea>
+            <button class="qa-submit-btn" type="button">إرسال الرد</button>
+          </div>
+        </div>
+        
+        <!-- رسالة التحويل للواتساب (مخفية تظهر عند الضغط) -->
+        <div id="qa-msg" hidden>🔒 لضمان الخصوصية التامة، جاري تحويلك للأخصائي الطبي عبر الواتساب الآمن...</div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الطلب (نموذج الشراء) -->
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="order-box">
+        <h2 data-i18n="orderTitle">احجز طلبك الآن بسرية</h2>
+        <p class="scarcity-text">🔥 <span data-i18n="scarcityMsg">الكمية المتبقية من العرض: 4 عبوات فقط!</span></p>
+        
+        <form id="orderForm">
+          <select id="package" required>
+            <option value="" disabled selected data-i18n="selectPackage">-- اختر العرض المناسب --</option>
+            <option value="1">عبوة واحدة (للتجربة) - 150 ₪</option>
+            <option value="2">🔥 عبوتين + شحن VIP مجاني - 250 ₪</option>
+            <option value="3">3 عبوات (الكورس الكامل) - 320 ₪</option>
+          </select>
+
+          <input type="text" id="name" placeholder="الاسم (أو اسم مستعار)" required>
+          <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+          <input type="text" id="city" placeholder="المدينة / العنوان" required>
+          
+          <button type="submit" class="btn btn-primary" data-i18n="submitOrder">تأكيد الطلب - الدفع عند الاستلام</button>
+        </form>
+        <p class="privacy-note">🔒 بياناتك مشفرة وسيتم حذفها تلقائياً بعد الاستلام</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- زر الواتساب العائم -->
+  <a href="https://wa.me/972512865105?text=مرحباً،%20مهتم%20بمنتج%20رايز..%20أرجو%20التواصل%20معي" class="floating-wa" target="_blank">
+    💬
+  </a>
+
+  <!-- الشريط السفلي الثابت للموبايل -->
+  <div class="mobile-sticky-cta">
+    <a href="#order" data-i18n="ctaButton">اطلب الآن - الدفع عند الاستلام</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
