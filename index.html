@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>مركز الارتقاء الطبي | Medical Elevation Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- شريط اللغات (Langbar) -->
+  <div class="langbar" role="navigation" aria-label="Language Switcher">
+    <button type="button" class="langchip is-active" data-lang="ar" aria-pressed="true">عربي</button>
+    <button type="button" class="langchip" data-lang="en" aria-pressed="false">English</button>
+    <button type="button" class="langchip" data-lang="he" aria-pressed="false">עברית</button>
+  </div>
+
+  <!-- الترويسة العلوية النظيفة (بدون حز) والصور الكاملة -->
+  <header class="clean-header">
+    <div class="header-slider-container">
+      <div class="slider-frame">
+        <img src="assets/slider/personal1.jpeg" alt="Medical Center 1" class="header-slide is-active" id="coverSlide1">
+        <img src="assets/slider/personal2.jpeg" alt="Medical Center 2" class="header-slide" id="coverSlide2">
+      </div>
+    </div>
+    
+    <div class="clinic-info-box">
+      <div class="clinic-badge" data-i18n="certifiedBadge">✔️ مركز طبي معتمد</div>
+      <h1 class="clinic-title" data-i18n="clinicName">🏥 مركز الارتقاء الطبي</h1>
+      <p class="clinic-sub" data-i18n="clinicSub">صرح طبي رائد.. وجهتك الآمنة لاستعادة صحتك وثقتك</p>
+      
+      <button type="button" class="location-btn" id="btnOpenMap">
+        <span data-i18n="clinicLocation">📍 موقعنا: سلطنة عمان - مسقط، شارع السلطان قابوس</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- القسم العلوي المتحرك -->
+  <div class="topBadgeWrapper">
+    <div class="topBadgeAnim" id="topBadgeAnim" data-i18n="topBadgeText">⭐ الخيار الطبي رقم #1 لصحة الرجل</div>
+  </div>
+
+  <!-- البطل (Hero) -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <h2 id="heroTitle" class="heroTitle" data-i18n="title">استعد قوتك وثقتك المطلقة في 15 دقيقة فقط!</h2>
+    <p class="heroSubtitle" data-i18n="subtitleLine1">وداعاً للارتخاء واللقاء القصير مع تركيبة 'رايز' الطبية. أداء فوري، سيطرة تامة، وأمان تام بدون أي أعراض جانبية.</p>
+    <div data-i18n-html="trustIconsHtml"></div>
+
+    <div class="cta-container">
+      <button type="button" class="cta-btn aBtn" data-scroll="#order">
+        <span data-i18n="stickyOrderBtn">اطلب الآن والدفع عند الاستلام</span> 👇
+      </button>
+    </div>
+  </section>
+
+  <!-- أزرار التنقل -->
+  <div class="actionRow">
+    <button type="button" class="actionBtn aBtn is-active" data-scroll="#reviews" data-i18n="btnReviews">آراء العملاء</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#benefits" data-i18n="btnBenefits">مميزات المنتج</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#usage" data-i18n="btnUsage">طريقة الاستخدام</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#order" data-i18n="btnOrder">اطلب الآن</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#guarantee" data-i18n="btnGuaranteeRefund">الضمان والاسترداد</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#about" data-i18n="btnAbout">من نحن</button>
+    <button type="button" class="actionBtn aBtn" data-scroll="#faq" data-i18n="btnFAQ">الأسئلة الشائعة</button>
+  </div>
+
+  <!-- الأقسام -->
+  <div id="sections" class="sectionsContainer">
+
+    <!-- التقييمات والآراء (مفتوح افتراضياً) -->
+    <section id="reviews" class="sectionPanel is-open" aria-labelledby="secReviewsTitle">
+      <h3 id="secReviewsTitle" class="sectionTitle" data-i18n="secReviewsTitle">آراء العملاء والاستشارات الطبية</h3>
+      <div class="reviewsSummaryBox">
+        <div class="rsLeft">
+          <div class="rsAvg" id="rsAvg">4.9/5</div>
+          <div class="rsStars" id="rsStars" aria-hidden="true">★★★★★</div>
+        </div>
+        <div class="rsRight">
+          <div class="rsCountLabel" id="rsCountLabel"><span data-i18n="reviewsCountLabel">عدد التقييمات</span>:</div>
+          <div class="rsCount" id="rsCount">0</div>
+        </div>
+      </div>
+      
+      <form id="reviewForm" class="reviewFormBox">
+        <div class="rfLabel" id="rfRateLabel" data-i18n="rateBeforeComment">قيّم المنتج أولاً</div>
+        <div class="rfStarsWrap" id="rfStars" aria-label="Rate product">
+          <button type="button" class="starBtn" data-star="1">★</button>
+          <button type="button" class="starBtn" data-star="2">★</button>
+          <button type="button" class="starBtn" data-star="3">★</button>
+          <button type="button" class="starBtn" data-star="4">★</button>
+          <button type="button" class="starBtn" data-star="5">★</button>
+          <div class="rfSpinner" id="rfStarsSpinner"></div>
+        </div>
+        <div class="rfError" id="rfError" hidden data-i18n="reviewNeedRating">يرجى اختيار عدد النجوم قبل إرسال التعليق.</div>
+        <input type="text" id="rfName" data-i18n-placeholder="phName" placeholder="الاسم" required disabled />
+        <textarea id="rfComment" rows="3" data-i18n-placeholder="phComment" placeholder="اكتب تعليقك..." required disabled></textarea>
+        <button type="submit" id="rfSubmit" disabled data-i18n="sendReview">إرسال التعليق</button>
+        <div class="rfSuccess" id="rfSuccess" hidden data-i18n="reviewSent">تم إرسال تقييمك وتعليقك. شكرًا لك!</div>
+      </form>
+
+      <div class="reviewsList" id="reviewsList"></div>
+      <button type="button" id="btnLoadMoreReviews" class="btnLoadMore" style="display:none;" data-i18n="btnLoadMoreReviews">عرض المزيد من آراء العملاء</button>
+    </section>
+
+    <!-- مميزات المنتج -->
+    <section id="benefits" class="sectionPanel" aria-labelledby="secBenefitsTitle">
+      <h3 id="secBenefitsTitle" class="sectionTitle" data-i18n="secBenefitsTitle">مميزات المنتج</h3>
+      <div data-i18n-html="benefitsHtml"></div>
+    </section>
+
+    <!-- طريقة الاستخدام -->
+    <section id="usage" class="sectionPanel" aria-labelledby="secUsageTitle">
+      <h3 id="secUsageTitle" class="sectionTitle" data-i18n="secUsageTitle">طريقة الاستخدام</h3>
+      <div data-i18n-html="usageHtml"></div>
+    </section>
+
+    <!-- الطلب -->
+    <section id="order" class="sectionPanel" aria-labelledby="secOrderTitle">
+      <h3 id="secOrderTitle" class="sectionTitle" data-i18n="secOrderTitle">اطلب الآن</h3>
+      
+      <div class="offersWrapper">
+        <div class="offersHeader">
+          <span class="offersTitle" data-i18n="offersTitle">عروض اليوم</span>
+          <div class="offersTimerBox">
+            <span data-i18n="offerEndsIn">ينتهي العرض خلال</span>
+            <span class="timerText" id="offerTimer">00:00:00</span>
+          </div>
+        </div>
+        <div class="offersGrid">
+          <div class="offerChip is-popular" data-offer="2">
+            <div class="offerBadge" data-i18n="popularBadge">الأكثر طلبًا</div>
+            <div class="offerQty" data-i18n="offerPack2">عبوتين</div>
+            <div class="offerPrice">200 <span data-i18n="currency">درهم</span></div>
+            <button type="button" class="offerBuy" data-i18n="buyNow">شراء</button>
+          </div>
+          <div class="offerChip" data-offer="3">
+            <div class="offerQty" data-i18n="offerPack3">3 عبوات</div>
+            <div class="offerPrice">250 <span data-i18n="currency">درهم</span></div>
+            <button type="button" class="offerBuy" data-i18n="buyNow">شراء</button>
+          </div>
+          <div class="offerChip" data-offer="1">
+            <div class="offerQty" data-i18n="offerPack1">عبوة واحدة</div>
+            <div class="offerPrice">130 <span data-i18n="currency">درهم</span></div>
+            <button type="button" class="offerBuy" data-i18n="buyNow">شراء</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="orderScarcity" data-i18n-html="scarcityHtml"></div>
+      
+      <form class="orderForm" id="orderForm" action="https://formspree.io/f/xbldpkvz" method="POST">
+        <input type="hidden" name="offer_selected" id="ofOfferName" value="">
+        <input type="hidden" name="total_price" id="ofTotalHidden" value="">
+        <input type="hidden" name="product" value="Rise Formula">
+        
+        <div class="form-group">
+          <label for="ofName" data-i18n="ofNameLabel">الاسم الكامل</label>
+          <input type="text" id="ofName" name="name" required class="form-input" data-i18n-placeholder="phName" placeholder="الاسم">
+        </div>
+        <div class="form-group">
+          <label for="ofPhone" data-i18n="ofPhoneLabel">رقم الهاتف/واتساب</label>
+          <input type="tel" id="ofPhone" name="phone" required class="form-input" data-i18n-placeholder="phPhone" placeholder="رقم الهاتف/واتساب" dir="ltr">
+        </div>
+        <div class="form-group">
+          <label for="ofCountry" data-i18n="ofCountryLabel">الدولة</label>
+          <select id="ofCountry" name="country" required class="form-input">
+            <option value="AE" data-i18n="countryAE" selected>الإمارات</option>
+            <option value="OM" data-i18n="countryOM">سلطنة عمان</option>
+            <option value="SA" data-i18n="countrySA">السعودية</option>
+            <option value="QA" data-i18n="countryQA">قطر</option>
+            <option value="BH" data-i18n="countryBH">البحرين</option>
+            <option value="IL" data-i18n="countryIL">إسرائيل</option>
+            <option value="PS" data-i18n="countryPS">فلسطين</option>
+            <option value="JO" data-i18n="countryJO">الأردن</option>
+            <option value="EG" data-i18n="countryEG">مصر</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ofCity" data-i18n="ofCityLabel">المدينة</label>
+          <input type="text" id="ofCity" name="city" required class="form-input" data-i18n-placeholder="phCity" placeholder="المدينة">
+        </div>
+        <div class="form-group">
+          <label for="ofAddress" data-i18n="ofAddressLabel">العنوان التفصيلي</label>
+          <input type="text" id="ofAddress" name="address" required class="form-input" data-i18n-placeholder="phAddress" placeholder="العنوان التفصيلي">
+        </div>
+        <div class="form-group">
+          <label for="qtySelect" data-i18n="qtyLabel">الكمية</label>
+          <select id="qtySelect" name="quantity" class="form-input">
+            <option value="1" data-i18n="qty1">1 عبوة</option>
+            <option value="2" data-i18n="qty2">2 عبوتان</option>
+            <option value="3" data-i18n="qty3">3 عبوات</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ofNote" data-i18n="ofNoteLabel">ملاحظة (اختياري)</label>
+          <textarea id="ofNote" name="note" rows="2" class="form-input" data-i18n-placeholder="phNote" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+        </div>
+        
+        <div class="orderTotalBox">
+          <div class="otRow">
+            <span data-i18n="totalLabel">السعر الإجمالي:</span>
+            <strong class="otPrice" id="totalPrice">130 درهم</strong>
+          </div>
+          <div class="otRow smText">
+            <span></span>
+            <span data-i18n="shippingIncluded">شامل التوصيل</span>
+          </div>
+        </div>
+
+        <button type="submit" class="submitBtn" id="ofSubmit" data-i18n="confirmOrder">تأكيد الطلب</button>
+        <p class="trustMini" data-i18n="orderTrustMini">بياناتك بأمان 🔒 • تأكيد سريع • شحن سري • دفع عند الاستلام</p>
+      </form>
+    </section>
+
+    <!-- الضمان -->
+    <section id="guarantee" class="sectionPanel" aria-labelledby="secGuaranteeTitle">
+      <h3 id="secGuaranteeTitle" class="sectionTitle" data-i18n="secGuaranteeTitle">الضمان والاسترداد</h3>
+      <div class="goldGuaranteeBox" data-i18n-html="goldGuaranteeHtml"></div>
+      
+      <div class="refundFormWrapper">
+        <h4 class="refundTitle" data-i18n="refundFormTitle">نموذج طلب الاسترداد</h4>
+        <p class="refundHint" data-i18n="refundFormHint">املأ البيانات التالية وسنتواصل معك خلال 24 ساعة.</p>
+        <form id="refundRequestForm" class="orderForm">
+          <div class="form-group">
+            <label for="rfuName" data-i18n="rfName">الاسم الكامل</label>
+            <input type="text" id="rfuName" required class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="rfuPhone" data-i18n="rfPhone">رقم الهاتف/واتساب</label>
+            <input type="tel" id="rfuPhone" required class="form-input" dir="ltr">
+          </div>
+          <div class="form-group">
+            <label for="rfuReceived" data-i18n="rfReceived">تاريخ الاستلام</label>
+            <input type="date" id="rfuReceived" required class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="rfuReason" data-i18n="rfReason">سبب طلب الاسترداد</label>
+            <textarea id="rfuReason" required class="form-input" rows="2" data-i18n-placeholder="phReason"></textarea>
+          </div>
+          <div class="form-group">
+            <label data-i18n="rfPhotos">صور المنتج والعبوة</label>
+            <label for="rfuPhotos" class="fileUploadBtn">
+              <span data-i18n="choosePhotos">اختيار الصور</span>
+              <input type="file" id="rfuPhotos" multiple accept="image/*" style="display:none;">
+            </label>
+            <div class="photoPreview" id="rfuPreview"></div>
+          </div>
+          <div class="rfError" id="rfuError" hidden data-i18n="refundNeedFields">يرجى تعبئة الحقول المطلوبة وإرفاق صور.</div>
+          <button type="submit" class="submitBtn" id="rfuSubmit" data-i18n="sendRefund">إرسال طلب الاسترداد</button>
+          <div class="rfSuccess" id="rfuSuccess" hidden data-i18n="refundSuccess">تم استلام طلب الاسترداد ✅</div>
+        </form>
+      </div>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about" class="sectionPanel" aria-labelledby="secAboutTitle">
+      <h3 id="secAboutTitle" class="sectionTitle" data-i18n="secAboutTitle">من نحن</h3>
+      <div data-i18n-html="aboutHtml"></div>
+    </section>
+
+    <!-- الأسئلة الشائعة -->
+    <section id="faq" class="sectionPanel" aria-labelledby="secFAQTitle">
+      <h3 id="secFAQTitle" class="sectionTitle" data-i18n="secFAQTitle">الأسئلة الشائعة</h3>
+      <div data-i18n-html="faqHtml"></div>
+    </section>
+
+  </div> <!-- نهاية sectionsContainer -->
+
+  <!-- الفوتر -->
+  <footer class="main-footer" data-i18n-html="footerInfo">
+    <!-- المحتوى سيُدرج هنا عبر JS -->
+  </footer>
+
+  <a href="#" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- المودلز -->
+  <div class="langOverlay" id="langOverlay" aria-hidden="true"><div class="langSpinner"></div><div class="langOverlayText" id="langOverlayText">جارٍ تطبيق اللغة…</div></div>
+  <div class="modal" id="orderModal" aria-hidden="true"><div class="modalContent"><div class="modalIcon">✅</div><h3 class="modalTitle" data-i18n="orderSuccessTitle">تم إرسال طلبك بنجاح!</h3><p class="modalDesc" data-i18n="orderSuccessDesc">شكرًا لثقتك بنا. طلبك الآن قيد المعالجة وسيقوم فريقنا الطبي بالتواصل معك هاتفياً خلال دقائق لتأكيد الشحن.</p><ul class="successFeatures"><li data-i18n="successFeature1">🔒 خصوصية تامة</li><li data-i18n="successFeature2">🚚 شحن سريع وسري</li></ul><button type="button" class="modalBtn" data-order-close data-i18n="btnUnderstand">حسنًا، فهمت</button></div></div>
+  <div class="mapModal" id="mapModal" aria-hidden="true"><div class="mapModalContent"><button class="mapCloseBtn" data-map-close>&times;</button><h3 data-i18n="mapModalTitle">📍 موقع مركز الارتقاء الطبي (مسقط)</h3><div class="mapFrameWrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116346.0371607567!2d58.46162235017202!3d23.585573489814467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91f1b2184d0087%3A0xc61cfd33de029193!2sSultan%20Qaboos%20St%2C%20Muscat%2C%20Oman!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="mapPinBadge" data-i18n="mapPinBadge">📍 مركز الارتقاء الطبي (مسقط - سلطنة عمان)</div></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
